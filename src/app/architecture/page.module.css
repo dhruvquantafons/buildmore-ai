@@ -1,0 +1,404 @@
+/* ── Arch Hero ────────────────────────── */
+.head {
+  padding: 7rem 0 4rem;
+  background: var(--gradient-hero);
+}
+
+.heroCopy {
+  max-width: 700px;
+  animation: fadeUp 0.8s var(--ease-out) both;
+}
+
+.title { margin: 0.5rem 0 1.25rem; }
+.lede { margin-bottom: 0; }
+
+/* ── Tier Rail ───────────────────────── */
+.tierRail {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.tierCard {
+  position: relative;
+  padding: 1.75rem 1.5rem;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--dur-normal) var(--ease-out);
+}
+
+.tierCard:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 30px rgba(0, 212, 255, 0.06);
+}
+
+.tierGlow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 40px;
+  background: radial-gradient(ellipse, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--dur-normal);
+}
+
+.tierCard:hover .tierGlow { opacity: 1; }
+
+.tierNum {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.small {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+/* ── Notes ────────────────────────────── */
+.notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.note {
+  padding: 1.75rem 1.5rem;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+}
+
+/* ── Flow List ───────────────────────── */
+.flowList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr 1.5fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  transition: all var(--dur-normal) var(--ease-out);
+}
+
+.flow:hover {
+  border-color: var(--border-glow);
+  background: var(--bg-card-hover);
+}
+
+.flowFrom {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent-cyan);
+}
+
+.flowArrow {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.flowTo {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent-amber);
+}
+
+.flowValue {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+/* ── Timeline ────────────────────────── */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 2rem;
+}
+
+.phase {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.phaseMark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding-top: 0.3rem;
+}
+
+.phaseMark span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  border: 2px solid var(--bg-secondary);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+}
+
+.phaseMark::after {
+  content: '';
+  flex: 1;
+  width: 2px;
+  background: var(--border-glass);
+  margin-top: 0.5rem;
+  min-height: 30px;
+}
+
+.phase:last-child .phaseMark::after { display: none; }
+
+.phaseBody {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.phase:last-child .phaseBody { border-bottom: none; }
+
+.phaseTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.phaseName {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.phaseMonths {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  padding: 0.2em 0.7em;
+  border-radius: 999px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+.phaseMilestone {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.phaseModules {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ── Tables ──────────────────────────── */
+.tableWrap {
+  overflow-x: auto;
+  margin-top: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-glass);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.table thead {
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.table th,
+.table td {
+  padding: 0.85rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.table th {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+.table tbody th {
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.88rem;
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.table tbody tr:last-child th,
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tableMuted {
+  color: var(--text-muted);
+}
+
+/* ── Two Col ─────────────────────────── */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.panel {
+  padding: 2rem 1.5rem;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+}
+
+.defList {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.defList li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.defTerm {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.defBody {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+.bullets {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bullets li {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.55;
+}
+
+.bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  opacity: 0.5;
+}
+
+/* ── Contact ─────────────────────────── */
+.contact {
+  padding: var(--section-py) 0;
+}
+
+.contactInner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.teamList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+  margin: 2rem 0;
+}
+
+.teamItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  transition: border-color var(--dur-normal);
+}
+
+.teamItem:hover {
+  border-color: var(--border-glow);
+}
+
+.teamName {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.teamRole {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.contactNote {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* ── Responsive ──────────────────────── */
+@media (max-width: 860px) {
+  .notes { grid-template-columns: 1fr; }
+  .twoCol { grid-template-columns: 1fr; }
+  .flow { grid-template-columns: 1fr; gap: 0.3rem; }
+  .flowArrow { display: none; }
+}
+
+@media (max-width: 600px) {
+  .tierRail { grid-template-columns: 1fr; }
+  .teamList { grid-template-columns: 1fr; }
+}
