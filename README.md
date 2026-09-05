@@ -1,6 +1,6 @@
 # BuildMore AI — Platform, Modules & Architecture
 
-A modern, high-performance, dark-themed web application for **BuildMore AI**, built with **Next.js (App Router)** and vanilla CSS with custom properties, glassmorphism, dynamic canvas particle animations, and responsive micro-interactions.
+A modern, high-performance, light-themed web application for **BuildMore AI**, built with **Next.js (App Router)** and vanilla CSS with custom properties, glassmorphism, dynamic canvas particle animations, and responsive micro-interactions.
 
 BuildMore AI is an enterprise AI infrastructure and module ecosystem designed for scale, resilience, and digital transformation.
 
@@ -8,7 +8,7 @@ BuildMore AI is an enterprise AI infrastructure and module ecosystem designed fo
 
 ## 🚀 Features & Highlights
 
-- **Modern Dark UI & Glassmorphism Design**: High-contrast dark theme with cyan (`#00d4ff`) and amber (`#f59e0b`) glow accents, subtle glassmorphism effects, and smooth scroll animations.
+- **Modern Light UI & Glassmorphism Design**: Clean light theme with deep cyan (`#0891b2`) and amber (`#d97706`) accents, soft glassmorphism surfaces, subtle shadows, and smooth scroll animations.
 - **Interactive Canvas Particle Grid**: Custom HTML5 Canvas particle system for dynamic hero section visual effects.
 - **Comprehensive 34-Module Ecosystem**: Filterable module directory grouped across 8 domain stacks (Core AI Foundation, Document & Data, Agentic Automation, Multimodal Vision, Real-Time Voice, Enterprise Data & Analytics, Domain AI, Governance & Security).
 - **Deep Architecture Overview**: Visual tier breakdowns (4 Tiers), interconnection flows, 6-phase strategic roadmap, market analysis, full technology stack, and leadership team overview.
@@ -126,14 +126,21 @@ npm run start
 
 The design system uses CSS custom properties defined in `src/app/globals.css`:
 
-- `--bg-dark`: `#07090e` (Primary canvas background)
-- `--cyan-primary`: `#00d4ff` (Primary glowing accent)
-- `--amber-accent`: `#f59e0b` (Secondary contrast accent)
-- `--card-bg`: `rgba(15, 23, 42, 0.65)` (Glassmorphism backdrop surface)
+- `--bg-primary`: `#f7f8fb` (Primary canvas background)
+- `--bg-secondary`: `#eef1f6` (Secondary surface / tinted sections)
+- `--accent-cyan`: `#0891b2` (Primary accent)
+- `--accent-amber`: `#d97706` (Secondary contrast accent)
+- `--text-primary`: `#0f172a` (Primary text)
+- `--text-secondary`: `#475569` (Secondary text)
+- `--bg-glass`: `rgba(255, 255, 255, 0.65)` (Glassmorphism backdrop surface)
+- `--border-glass`: `rgba(15, 23, 42, 0.08)` (Subtle border)
+- `--border-glow`: `rgba(8, 145, 178, 0.35)` (Accent border on hover/focus)
+- `--gradient-cyan`: `linear-gradient(135deg, #0891b2 0%, #0e7490 100%)` (Primary CTA)
+- `--shadow-card`: `0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.06)`
+- `--shadow-glow-cyan`: `0 8px 30px rgba(8, 145, 178, 0.15)`
 
 ---
 
 ## 📄 License
 
 This project is licensed under the MIT License.
-
