@@ -80,41 +80,76 @@ export default function ModulesClient({ stacks, pricing }) {
       ))}
 
       {/* ═══ PRICING ═══ */}
-      <section className="section" id="pricing">
-        <div className="shell">
-          <RevealOnScroll>
-            <div className={styles.centreHead}>
-              <p className="kicker">Pricing</p>
-              <h2 className="h2">Simple, transparent <em>pricing</em></h2>
-              <p className="lede" style={{ margin: '0 auto' }}>
-                Start with a single module or go all-in with the full platform. Every plan includes
-                Indian cloud infrastructure and data sovereignty.
-              </p>
-            </div>
-          </RevealOnScroll>
+      {(() => {
+        const pricingInfo = Array.isArray(pricing)
+          ? {
+              kicker: 'PRICING',
+              title: 'Two products free. The rest unlocks together.',
+              subtitle: 'Start on the free tier with the two products already shipping. One licence unlocks all 34 modules — no per-seat pricing, no per-module gating.',
+              disclaimer: 'Sensor hardware, API access and consulting are priced separately.',
+              tiers: pricing,
+            }
+          : pricing;
 
-          <div className={styles.pricingGrid}>
-            {pricing.map((tier, i) => (
-              <RevealOnScroll key={tier.name} delay={i * 100}>
-                <article className={`${styles.pricingCard} ${tier.popular ? styles.pricingPopular : ''}`}>
-                  {tier.popular && <span className={styles.pricingBadge}>Most Popular</span>}
-                  <h3 className={styles.pricingName}>{tier.name}</h3>
-                  <p className={styles.pricingPrice}>{tier.price}</p>
-                  <p className={styles.pricingDesc}>{tier.description}</p>
-                  <ul className={styles.pricingFeatures}>
-                    {tier.features.map((f, fi) => (
-                      <li key={fi}>{f}</li>
-                    ))}
-                  </ul>
-                  <Link href="/architecture#contact" className={`btn ${tier.popular ? 'btn--primary' : 'btn--ghost'}`}>
-                    Get started
-                  </Link>
-                </article>
+        return (
+          <section className="section" id="pricing">
+            <div className="shell">
+              <RevealOnScroll>
+                <div className={styles.centreHead}>
+                  <p className="kicker">• {pricingInfo.kicker || 'PRICING'}</p>
+                  <h2 className="h2">
+                    Two products free. The rest <em>unlocks</em> together.
+                  </h2>
+                  <p className="lede" style={{ maxWidth: '780px', margin: '1rem auto 0' }}>
+                    {pricingInfo.subtitle}
+                  </p>
+                </div>
               </RevealOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
+
+              <div className={styles.pricingGrid}>
+                {(pricingInfo.tiers || []).map((tier, i) => (
+                  <RevealOnScroll key={tier.id || tier.name || i} delay={i * 120}>
+                    <article
+                      className={`${styles.pricingCard} ${tier.isPopular || tier.popular ? styles.pricingPopular : ''}`}
+                    >
+                      <span className={styles.pricingTag}>{tier.label || tier.name}</span>
+                      <div className={styles.pricingPriceWrap}>
+                        <p className={styles.pricingPrice}>{tier.price}</p>
+                        {tier.sublabel && <p className={styles.pricingSublabel}>{tier.sublabel}</p>}
+                      </div>
+                      {tier.description && <p className={styles.pricingDesc}>{tier.description}</p>}
+
+                      <div className={styles.pricingDivider} />
+
+                      <ul className={styles.pricingFeatures}>
+                        {tier.features.map((f, fi) => (
+                          <li key={fi}>{f}</li>
+                        ))}
+                      </ul>
+
+                      <Link
+                        href={tier.ctaHref || '/architecture#contact'}
+                        className={`btn ${tier.isPopular || tier.popular ? 'btn--primary' : 'btn--ghost'} ${styles.pricingBtn}`}
+                      >
+                        {tier.ctaText || 'Get started →'}
+                      </Link>
+                    </article>
+                  </RevealOnScroll>
+                ))}
+              </div>
+
+              {pricingInfo.disclaimer && (
+                <RevealOnScroll delay={300}>
+                  <p className={styles.pricingFootnote}>
+                    {pricingInfo.disclaimer}
+                  </p>
+                </RevealOnScroll>
+              )}
+            </div>
+          </section>
+        );
+      })()}
     </>
   );
 }
+

@@ -462,24 +462,44 @@ export const heroStacks = [
   { kicker: 'Extended Intelligence', badge: '', title: 'Edge Cases', arrow: 'Covered Modules', sub: 'Avalanche · Utilities · Heritage · Robotics' },
 ];
 
-export const pricingTiers = [
-  {
-    name: 'Starter',
-    price: 'Contact us',
-    description: 'For small firms getting started with AI-powered design',
-    features: ['Up to 3 modules', 'Basic API access', 'Email support', '5 projects / month'],
-  },
-  {
-    name: 'Professional',
-    price: 'Contact us',
-    description: 'For mid-size firms and consultancies',
-    features: ['Up to 12 modules', 'Full API access', 'Priority support', 'Unlimited projects', 'Custom integrations'],
-    popular: true,
-  },
-  {
-    name: 'Enterprise',
-    price: 'Contact us',
-    description: 'For large contractors and government agencies',
-    features: ['All 34 modules', 'Dedicated infrastructure', '24/7 support', 'Unlimited projects', 'Custom sensors', 'On-premise deployment'],
-  },
-];
+export const pricingData = {
+  kicker: 'PRICING',
+  title: 'Two products free. The rest unlocks together.',
+  subtitle: 'Start on the free tier with the two products already shipping. One licence unlocks all 34 modules — no per-seat pricing, no per-module gating.',
+  disclaimer: 'Sensor hardware, API access and consulting are priced separately.',
+  tiers: [
+    {
+      id: 'free',
+      label: 'FREE TIER',
+      price: '₹0',
+      sublabel: 'CONSTRUCTOS + RISKVIZ ONLY',
+      features: [
+        'ConstructOS — site operations, workforce, procurement, RA billing, quality & safety and the client portal',
+        'RiskViz — five scored risk layers, polygon AOI assessment and satellite change detection',
+        'Unlimited projects on both products',
+        'The other 32 modules stay locked',
+      ],
+      ctaText: 'Start free →',
+      ctaHref: '/architecture#contact',
+      isPopular: false,
+    },
+    {
+      id: 'full',
+      label: 'FULL PLATFORM',
+      price: '₹25,00,000',
+      sublabel: 'PER YEAR · UNLOCKS ALL 34 MODULES',
+      features: [
+        'Every stack — design intelligence, site monitoring, structural health, disaster prediction, infrastructure health and smart operations',
+        'BuildMore LM, the digital twin and the 8 extended modules',
+        '150+ sub-systems on one data model, unlimited projects',
+        'All data stays in India, on Indian cloud infrastructure',
+      ],
+      ctaText: 'Talk to us →',
+      ctaHref: '/architecture#contact',
+      isPopular: true,
+    },
+  ],
+};
+
+export const pricingTiers = pricingData.tiers;
+

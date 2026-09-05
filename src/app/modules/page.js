@@ -1,4 +1,4 @@
-import { moduleStacks, pricingTiers } from '@/data/modules';
+import { moduleStacks, pricingData } from '@/data/modules';
 import ModulesClient from './ModulesClient';
 
 export const metadata = {
@@ -7,5 +7,6 @@ export const metadata = {
 };
 
 export default function ModulesPage() {
-  return <ModulesClient stacks={moduleStacks} pricing={pricingTiers} />;
+  return <ModulesClient stacks={moduleStacks} pricing={pricingData} />;
 }
+
