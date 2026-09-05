@@ -11,7 +11,7 @@
 }
 
 .scrolled {
-  background: rgba(6, 6, 11, 0.85);
+  background: rgba(247, 248, 251, 0.82);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-glass);
@@ -80,12 +80,12 @@
 
 .link:hover {
   color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(15, 23, 42, 0.04);
 }
 
 .active {
   color: var(--accent-cyan) !important;
-  background: rgba(0, 212, 255, 0.08);
+  background: rgba(8, 145, 178, 0.1);
 }
 
 /* ── CTA ─── */
@@ -98,13 +98,13 @@
   padding: 0.55em 1.2em;
   border-radius: var(--radius-sm);
   background: var(--gradient-cyan);
-  color: #06060b;
+  color: #ffffff;
   transition: box-shadow var(--dur-normal) var(--ease-out), transform var(--dur-fast);
   white-space: nowrap;
 }
 
 .cta:hover {
-  box-shadow: 0 0 24px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 6px 24px rgba(8, 145, 178, 0.35);
   transform: translateY(-1px);
 }
 
@@ -153,7 +153,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(6, 6, 11, 0.97);
+    background: rgba(247, 248, 251, 0.97);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     flex-direction: column;

@@ -44,18 +44,19 @@
 }
 
 .heroCard {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-glass);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg);
   overflow: hidden;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: border-color var(--dur-normal), box-shadow var(--dur-normal);
+  box-shadow: var(--shadow-card);
 }
 
 .heroCard:hover {
-  border-color: rgba(0, 212, 255, 0.2);
-  box-shadow: 0 0 40px rgba(0, 212, 255, 0.06);
+  border-color: rgba(8, 145, 178, 0.35);
+  box-shadow: 0 8px 40px rgba(8, 145, 178, 0.1);
 }
 
 .heroCardChrome {
@@ -63,7 +64,7 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.65rem 1rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(15, 23, 42, 0.04);
   border-bottom: 1px solid var(--border-glass);
 }
 
@@ -76,12 +77,12 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.12);
 }
 
-.dots i:first-child { background: rgba(239, 68, 68, 0.6); }
-.dots i:nth-child(2) { background: rgba(245, 158, 11, 0.6); }
-.dots i:nth-child(3) { background: rgba(34, 197, 94, 0.6); }
+.dots i:first-child { background: rgba(239, 68, 68, 0.7); }
+.dots i:nth-child(2) { background: rgba(217, 119, 6, 0.7); }
+.dots i:nth-child(3) { background: rgba(22, 163, 74, 0.7); }
 
 .chromeLabel {
   font-family: var(--font-mono);
@@ -178,7 +179,7 @@
 .stackCard:hover {
   border-color: var(--border-glow);
   transform: translateY(-4px);
-  box-shadow: 0 8px 40px rgba(0, 212, 255, 0.08);
+  box-shadow: 0 8px 30px rgba(8, 145, 178, 0.12);
 }
 
 .stackCard:hover::before { opacity: 1; }
@@ -194,9 +195,9 @@
   letter-spacing: 0.06em;
   padding: 0.2em 0.7em;
   border-radius: 999px;
-  background: rgba(0, 212, 255, 0.12);
+  background: rgba(8, 145, 178, 0.1);
   color: var(--accent-cyan);
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  border: 1px solid rgba(8, 145, 178, 0.22);
 }
 
 .stackKicker {
@@ -260,8 +261,8 @@
 }
 
 .problemCard:hover {
-  border-color: rgba(245, 158, 11, 0.3);
-  box-shadow: 0 0 30px rgba(245, 158, 11, 0.05);
+  border-color: rgba(217, 119, 6, 0.4);
+  box-shadow: 0 8px 30px rgba(217, 119, 6, 0.08);
 }
 
 .problemValue {
@@ -297,7 +298,7 @@
   border-radius: var(--radius-xl);
   overflow: hidden;
   min-height: 360px;
-  background: linear-gradient(135deg, #1a0e0a 0%, #0d1a12 50%, #0a0e1a 100%);
+  background: linear-gradient(135deg, #fff7ed 0%, #f0fdf4 50%, #ecfeff 100%);
   border: 1px solid var(--border-glass);
   display: flex;
   align-items: flex-end;
@@ -308,7 +309,7 @@
   z-index: 1;
   padding: 3rem;
   width: 100%;
-  background: linear-gradient(to top, rgba(6,6,11,0.95) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(247,248,251,0.95) 0%, transparent 100%);
 }
 
 .bandKicker {
@@ -358,7 +359,7 @@
 
 .tier:hover {
   border-color: var(--border-glow);
-  box-shadow: 0 0 30px rgba(0, 212, 255, 0.05);
+  box-shadow: var(--shadow-card);
 }
 
 .tierNum {
@@ -465,8 +466,9 @@
   text-align: center;
   padding: 4rem 2rem;
   border-radius: var(--radius-xl);
-  background: linear-gradient(135deg, rgba(0,212,255,0.05) 0%, rgba(245,158,11,0.03) 100%);
+  background: linear-gradient(135deg, rgba(8,145,178,0.08) 0%, rgba(217,119,6,0.05) 100%);
   border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-card);
 }
 
 .ctaTitle { margin-bottom: 1rem; }

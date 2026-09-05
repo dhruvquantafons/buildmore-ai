@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────
    BuildMore AI — Design System
-   Dark theme · Glassmorphism · Micro-animations
+   Light theme · Glassmorphism · Micro-animations
    ───────────────────────────────────────────── */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -8,27 +8,31 @@
 /* ── Tokens ──────────────────────────────── */
 :root {
   /* Colour palette */
-  --bg-primary:    #06060b;
-  --bg-secondary:  #0c0c14;
-  --bg-card:       rgba(255, 255, 255, 0.03);
-  --bg-card-hover: rgba(255, 255, 255, 0.06);
-  --bg-glass:      rgba(255, 255, 255, 0.04);
-  --border-glass:  rgba(255, 255, 255, 0.08);
-  --border-glow:   rgba(0, 212, 255, 0.25);
+  --bg-primary:    #f7f8fb;
+  --bg-secondary:  #eef1f6;
+  --bg-card:       rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 1);
+  --bg-glass:      rgba(255, 255, 255, 0.65);
+  --border-glass:  rgba(15, 23, 42, 0.08);
+  --border-glow:   rgba(8, 145, 178, 0.35);
+  --border-subtle: rgba(15, 23, 42, 0.06);
 
-  --text-primary:   #e8eaed;
-  --text-secondary: #8b8fa3;
-  --text-muted:     #5a5e72;
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --text-muted:     #94a3b8;
 
-  --accent-cyan:    #00d4ff;
-  --accent-amber:   #f59e0b;
+  --accent-cyan:    #0891b2;
+  --accent-amber:   #d97706;
   --accent-red:     #ef4444;
-  --accent-green:   #22c55e;
-  --accent-purple:  #a78bfa;
+  --accent-green:   #16a34a;
+  --accent-purple:  #7c3aed;
 
-  --gradient-hero: linear-gradient(135deg, #06060b 0%, #0d1117 50%, #0a0e1a 100%);
-  --gradient-cyan: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-  --gradient-card: linear-gradient(135deg, rgba(0,212,255,0.05) 0%, rgba(245,158,11,0.03) 100%);
+  --shadow-card:    0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.06);
+  --shadow-glow-cyan: 0 8px 30px rgba(8, 145, 178, 0.15);
+
+  --gradient-hero: linear-gradient(135deg, #f7f8fb 0%, #e6eff5 50%, #eef1f6 100%);
+  --gradient-cyan: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+  --gradient-card: linear-gradient(135deg, rgba(8,145,178,0.06) 0%, rgba(217,119,6,0.04) 100%);
 
   /* Typography */
   --font-display: 'Space Grotesk', sans-serif;
@@ -172,7 +176,7 @@ ul, ol { list-style: none; }
 .glass--hover:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-glow);
-  box-shadow: 0 0 30px rgba(0, 212, 255, 0.06);
+  box-shadow: var(--shadow-card);
 }
 
 /* ── Chip / Tag ─────────────────────────── */
@@ -183,9 +187,9 @@ ul, ol { list-style: none; }
   font-weight: 500;
   padding: 0.3em 0.85em;
   border-radius: 999px;
-  background: rgba(0, 212, 255, 0.08);
+  background: rgba(8, 145, 178, 0.08);
   color: var(--accent-cyan);
-  border: 1px solid rgba(0, 212, 255, 0.15);
+  border: 1px solid rgba(8, 145, 178, 0.18);
   white-space: nowrap;
 }
 
@@ -205,23 +209,23 @@ ul, ol { list-style: none; }
 
 .btn--primary {
   background: var(--gradient-cyan);
-  color: #06060b;
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(8, 145, 178, 0.25);
 }
 
 .btn--primary:hover {
-  box-shadow: 0 0 40px rgba(0, 212, 255, 0.35);
+  box-shadow: 0 10px 30px rgba(8, 145, 178, 0.35);
   transform: translateY(-2px);
 }
 
 .btn--ghost {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(15, 23, 42, 0.1);
   color: var(--text-primary);
 }
 
 .btn--ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 1);
   border-color: var(--accent-cyan);
 }
 
@@ -237,8 +241,8 @@ ul, ol { list-style: none; }
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.1); }
-  50%      { box-shadow: 0 0 40px rgba(0, 212, 255, 0.2); }
+  0%, 100% { box-shadow: 0 4px 16px rgba(8, 145, 178, 0.15); }
+  50%      { box-shadow: 0 8px 28px rgba(8, 145, 178, 0.25); }
 }
 
 @keyframes pulse {
@@ -283,15 +287,15 @@ ul, ol { list-style: none; }
   background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.18);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(15, 23, 42, 0.3);
 }
 
 /* ── Selection ──────────────────────────── */
 ::selection {
-  background: rgba(0, 212, 255, 0.3);
-  color: #fff;
+  background: rgba(8, 145, 178, 0.25);
+  color: var(--text-primary);
 }

@@ -115,7 +115,7 @@
 
 .card:hover {
   border-color: var(--border-glow);
-  box-shadow: 0 4px 30px rgba(0, 212, 255, 0.05);
+  box-shadow: 0 8px 30px rgba(8, 145, 178, 0.1);
   transform: translateY(-2px);
 }
 
@@ -143,8 +143,8 @@
   color: var(--accent-amber);
   padding: 0.15em 0.6em;
   border-radius: 999px;
-  background: rgba(245, 158, 11, 0.1);
-  border: 1px solid rgba(245, 158, 11, 0.15);
+  background: rgba(217, 119, 6, 0.08);
+  border: 1px solid rgba(217, 119, 6, 0.2);
 }
 
 .cardName {
@@ -233,9 +233,9 @@
 }
 
 .pricingPopular {
-  border-color: rgba(0, 212, 255, 0.35);
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.07) 0%, rgba(15, 23, 42, 0.8) 100%);
-  box-shadow: 0 0 50px rgba(0, 212, 255, 0.08);
+  border-color: rgba(8, 145, 178, 0.4);
+  background: linear-gradient(135deg, rgba(8, 145, 178, 0.08) 0%, rgba(255, 255, 255, 0.9) 100%);
+  box-shadow: 0 8px 40px rgba(8, 145, 178, 0.12);
 }
 
 .pricingTag {

@@ -33,7 +33,7 @@
 .tierCard:hover {
   border-color: var(--border-glow);
   transform: translateY(-3px);
-  box-shadow: 0 4px 30px rgba(0, 212, 255, 0.06);
+  box-shadow: var(--shadow-card);
 }
 
 .tierGlow {
@@ -43,7 +43,7 @@
   transform: translateX(-50%);
   width: 80%;
   height: 40px;
-  background: radial-gradient(ellipse, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(8, 145, 178, 0.12) 0%, transparent 70%);
   opacity: 0;
   transition: opacity var(--dur-normal);
 }
@@ -161,7 +161,7 @@
   border-radius: 50%;
   background: var(--accent-cyan);
   border: 2px solid var(--bg-secondary);
-  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.25);
 }
 
 .phaseMark::after {
@@ -203,8 +203,8 @@
   color: var(--accent-cyan);
   padding: 0.2em 0.7em;
   border-radius: 999px;
-  background: rgba(0, 212, 255, 0.08);
-  border: 1px solid rgba(0, 212, 255, 0.15);
+  background: rgba(8, 145, 178, 0.08);
+  border: 1px solid rgba(8, 145, 178, 0.18);
 }
 
 .phaseMilestone {
@@ -234,7 +234,7 @@
 }
 
 .table thead {
-  background: rgba(0, 212, 255, 0.05);
+  background: rgba(8, 145, 178, 0.06);
 }
 
 .table th,
@@ -262,7 +262,7 @@
 }
 
 .table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(8, 145, 178, 0.04);
 }
 
 .table tbody tr:last-child th,

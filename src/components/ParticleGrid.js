@@ -67,10 +67,10 @@ export default function ParticleGrid() {
           p.y += (dy / dist) * force * 15;
         }
 
-        const alpha = 0.15 + Math.sin(time + p.phase) * 0.08;
+        const alpha = 0.35 + Math.sin(time + p.phase) * 0.12;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 212, 255, ${alpha})`;
+        ctx.fillStyle = `rgba(8, 145, 178, ${alpha})`;
         ctx.fill();
       }
 
@@ -84,7 +84,7 @@ export default function ParticleGrid() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(0, 212, 255, ${0.04 * (1 - dist / 80)})`;
+            ctx.strokeStyle = `rgba(8, 145, 178, ${0.12 * (1 - dist / 80)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
