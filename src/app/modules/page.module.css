@@ -1,7 +1,7 @@
 /* ── Modules Hero ────────────────────── */
 .head {
   padding: 7rem 0 3rem;
-  background: var(--gradient-hero);
+  background: linear-gradient(90deg, rgba(18,18,16,.96), rgba(18,18,16,.68)), url('/images/modules-hero-v1.png?v=20260907-2') center/cover;
 }
 
 .heroCopy {
@@ -11,6 +11,9 @@
 
 .title { margin: 0.5rem 0 1.25rem; }
 .lede { margin-bottom: 2.5rem; }
+.head .title, .head .lede { color: #fff; }
+.head .lede { color: rgba(255,255,255,.72); }
+.head .title { font-size: clamp(3.8rem, 7vw, 6.5rem); line-height: .88; max-width: 10ch; }
 
 /* ── Jump Nav ────────────────────────── */
 .jump {
@@ -26,8 +29,8 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.85rem 1.25rem;
-  background: var(--bg-glass);
-  border: 1px solid var(--border-glass);
+  background: rgba(255,255,255,.94);
+  border: 1px solid rgba(255,255,255,.28);
   border-radius: var(--radius-md);
   transition: all var(--dur-normal) var(--ease-out);
 }
@@ -95,7 +98,8 @@
   padding: 2rem 1.75rem;
   background: var(--bg-glass);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-lg);
+  border-radius: 0;
+  border-top: 4px solid transparent;
   transition: all var(--dur-normal) var(--ease-out);
   position: relative;
   overflow: hidden;
@@ -118,6 +122,7 @@
   box-shadow: 0 8px 30px rgba(8, 145, 178, 0.1);
   transform: translateY(-2px);
 }
+.card:hover { border-top-color: var(--accent-amber); }
 
 .card:hover::after { opacity: 1; }
 
@@ -217,7 +222,8 @@
   padding: 3rem 2.5rem;
   background: var(--bg-glass);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-xl);
+  border-radius: 0;
+  border-top: 4px solid var(--accent-amber);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -338,4 +344,3 @@
     font-size: 2.2rem;
   }
 }
-

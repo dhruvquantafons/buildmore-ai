@@ -1,7 +1,7 @@
 /* ── Arch Hero ────────────────────────── */
 .head {
   padding: 7rem 0 4rem;
-  background: var(--gradient-hero);
+  background: linear-gradient(90deg, rgba(18,18,16,.96), rgba(18,18,16,.68)), url('/images/architecture-hero-v1.png?v=20260907-2') center/cover;
 }
 
 .heroCopy {
@@ -11,6 +11,9 @@
 
 .title { margin: 0.5rem 0 1.25rem; }
 .lede { margin-bottom: 0; }
+.head .title, .head .lede { color: #fff; }
+.head .lede { color: rgba(255,255,255,.72); }
+.head .title { font-size: clamp(3.8rem, 7vw, 6.5rem); line-height: .88; max-width: 11ch; }
 
 /* ── Tier Rail ───────────────────────── */
 .tierRail {
@@ -25,7 +28,8 @@
   padding: 1.75rem 1.5rem;
   background: var(--bg-glass);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-lg);
+  border-radius: 0;
+  border-top: 4px solid var(--accent-amber);
   overflow: hidden;
   transition: all var(--dur-normal) var(--ease-out);
 }
@@ -80,7 +84,7 @@
   padding: 1.75rem 1.5rem;
   background: var(--bg-glass);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-lg);
+  border-radius: 0;
 }
 
 /* ── Flow List ───────────────────────── */
@@ -99,7 +103,7 @@
   padding: 0.85rem 1.25rem;
   background: var(--bg-glass);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
+  border-radius: 0;
   transition: all var(--dur-normal) var(--ease-out);
 }
 
@@ -223,7 +227,7 @@
 .tableWrap {
   overflow-x: auto;
   margin-top: 2rem;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   border: 1px solid var(--border-glass);
 }
 
@@ -286,7 +290,7 @@
   padding: 2rem 1.5rem;
   background: var(--bg-glass);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-lg);
+  border-radius: 0;
 }
 
 .defList {

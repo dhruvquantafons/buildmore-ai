@@ -3,41 +3,41 @@
    Light theme · Glassmorphism · Micro-animations
    ───────────────────────────────────────────── */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 
 /* ── Tokens ──────────────────────────────── */
 :root {
   /* Colour palette */
-  --bg-primary:    #f7f8fb;
-  --bg-secondary:  #eef1f6;
-  --bg-card:       rgba(255, 255, 255, 0.85);
-  --bg-card-hover: rgba(255, 255, 255, 1);
-  --bg-glass:      rgba(255, 255, 255, 0.65);
-  --border-glass:  rgba(15, 23, 42, 0.08);
-  --border-glow:   rgba(8, 145, 178, 0.35);
-  --border-subtle: rgba(15, 23, 42, 0.06);
+  --bg-primary:    #f4f2ec;
+  --bg-secondary:  #e7e3da;
+  --bg-card:       #fbfaf7;
+  --bg-card-hover: #ffffff;
+  --bg-glass:      rgba(255, 254, 250, 0.82);
+  --border-glass:  rgba(25, 25, 22, 0.15);
+  --border-glow:   rgba(230, 83, 24, 0.72);
+  --border-subtle: rgba(25, 25, 22, 0.09);
 
-  --text-primary:   #0f172a;
-  --text-secondary: #475569;
-  --text-muted:     #94a3b8;
+  --text-primary:   #161614;
+  --text-secondary: #5d5b55;
+  --text-muted:     #858178;
 
-  --accent-cyan:    #0891b2;
-  --accent-amber:   #d97706;
+  --accent-cyan:    #e65318;
+  --accent-amber:   #e65318;
   --accent-red:     #ef4444;
   --accent-green:   #16a34a;
   --accent-purple:  #7c3aed;
 
-  --shadow-card:    0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.06);
-  --shadow-glow-cyan: 0 8px 30px rgba(8, 145, 178, 0.15);
+  --shadow-card:    0 1px 0 rgba(25, 25, 22, 0.12), 0 10px 25px rgba(25, 25, 22, 0.07);
+  --shadow-glow-cyan: 0 10px 26px rgba(230, 83, 24, 0.2);
 
-  --gradient-hero: linear-gradient(135deg, #f7f8fb 0%, #e6eff5 50%, #eef1f6 100%);
-  --gradient-cyan: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
-  --gradient-card: linear-gradient(135deg, rgba(8,145,178,0.06) 0%, rgba(217,119,6,0.04) 100%);
+  --gradient-hero: linear-gradient(135deg, #282824 0%, #171715 100%);
+  --gradient-cyan: linear-gradient(135deg, #ed6d27 0%, #cf4313 100%);
+  --gradient-card: linear-gradient(135deg, rgba(230,83,24,0.07) 0%, rgba(25,25,22,0.02) 100%);
 
   /* Typography */
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body:    'Inter', sans-serif;
-  --font-mono:    'JetBrains Mono', monospace;
+  --font-display: 'Barlow Condensed', Impact, sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'DM Mono', monospace;
 
   /* Spacing */
   --shell-max:  1280px;
@@ -46,10 +46,10 @@
   --gap:        clamp(1rem, 2.5vw, 2rem);
 
   /* Radii */
-  --radius-sm:  8px;
-  --radius-md:  14px;
-  --radius-lg:  20px;
-  --radius-xl:  28px;
+  --radius-sm:  0px;
+  --radius-md:  0px;
+  --radius-lg:  0px;
+  --radius-xl:  0px;
 
   /* Transitions */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -94,7 +94,8 @@ ul, ol { list-style: none; }
   font-weight: 700;
   font-size: clamp(2.25rem, 5.5vw, 4.5rem);
   line-height: 1.08;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
   color: var(--text-primary);
 }
 
@@ -111,7 +112,8 @@ ul, ol { list-style: none; }
   font-weight: 700;
   font-size: clamp(1.75rem, 4vw, 3rem);
   line-height: 1.12;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
 }
 
 .h2 em {
@@ -127,7 +129,8 @@ ul, ol { list-style: none; }
   font-weight: 600;
   font-size: clamp(1.15rem, 2vw, 1.4rem);
   line-height: 1.25;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .kicker {
@@ -187,9 +190,10 @@ ul, ol { list-style: none; }
   font-weight: 500;
   padding: 0.3em 0.85em;
   border-radius: 999px;
-  background: rgba(8, 145, 178, 0.08);
+  background: rgba(230, 83, 24, 0.08);
   color: var(--accent-cyan);
-  border: 1px solid rgba(8, 145, 178, 0.18);
+  border: 1px solid rgba(230, 83, 24, 0.25);
+  border-radius: 0;
   white-space: nowrap;
 }
 
@@ -210,7 +214,7 @@ ul, ol { list-style: none; }
 .btn--primary {
   background: var(--gradient-cyan);
   color: #ffffff;
-  box-shadow: 0 6px 20px rgba(8, 145, 178, 0.25);
+  box-shadow: none;
 }
 
 .btn--primary:hover {
@@ -219,8 +223,8 @@ ul, ol { list-style: none; }
 }
 
 .btn--ghost {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: transparent;
+  border: 1px solid currentColor;
   color: var(--text-primary);
 }
 
